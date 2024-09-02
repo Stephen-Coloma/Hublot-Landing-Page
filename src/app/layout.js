@@ -2,7 +2,7 @@
 import { Montserrat, Libre_Baskerville } from 'next/font/google'
 
 export const montserrat = Montserrat({
-    variable: '--main-font',
+    variable: '--font-montserrat',
     weight: ['400', '700'],
     style: ['normal', 'italic'],
     subsets: ['latin'],
@@ -10,14 +10,14 @@ export const montserrat = Montserrat({
 })
 
 export const libre_baskerville = Libre_Baskerville({
-    variable: '--accent-font',
+    variable: '--font-libre-baskerville',
     weight: ['400', '700'],
     style: ['normal', 'italic'],
     subsets: ['latin'],
     display: 'swap',
 })
 
-import '../styles/globals.css' 
+import './globals.css' 
 
 export const metadata = {
   title: "Hublot Watches",
