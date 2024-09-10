@@ -24,25 +24,25 @@
     width: 1.7rem;
 }
 
-#logo{
+#logoContainer{
     width: 50%;
 }
 
-#logo img{
-    width: 8rem;
+#logoContainer img{
+    width: 8.6rem;
 }
 
-.search{    
+#search{    
     /* border: green solid 3px; */
     width: 100%;
     padding: 0 .5rem;
     display: flex;
     justify-content: start;
     align-items: center;
-    height: 3.2rem;
+    height: 4rem;
 }
 
-.search > div{
+#search > div{
     /* border: red solid 3px; */
     width: 2rem;
     display: flex;
@@ -50,14 +50,86 @@
     align-items: center;
 }
 
-.search > div > img{
+#search > div > img{
     width: 1.2rem;
 }
 
-.search > h2{
+#search > h2{
     font-family: var(--font-libre-baskerville);
     font-style: italic;
     font-weight: 400;
     color: var(--gray-color-1);
-    margin-left: rem;
+}
+
+
+/* Handling responsiveness on the header component */
+.web{
+    display: none;
+}
+
+#textContainer{
+    display: none;
+}
+
+#textContainer > h2{
+    width: 30%;
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+#hublotista > h2{
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+#hublotista > img{
+    width: 1.2rem;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .web{
+        width: 15%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mobile{
+        display: none;
+    }
+
+    .imageContainer{
+        width: 5%;
+    }
+
+    #logoContainer{
+        width: 20%;
+        justify-content: start;
+        border-right: none;
+        padding: 0 1rem;
+    }
+
+    #textContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 53%;
+    }
+
+    #search{
+        display: none;
+    }
+
+    #hublotista{
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: .5rem;
+        padding: 0 .5rem;
+        border-right: 1px solid var(--gray-color-2);
+    }
 }
