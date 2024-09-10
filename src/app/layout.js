@@ -3,7 +3,7 @@ import { Montserrat, Libre_Baskerville } from 'next/font/google'
 
 export const montserrat = Montserrat({
     variable: '--font-montserrat',
-    weight: ['400', '700'],
+    weight: ['400', '700', '900'],
     style: ['normal', 'italic'],
     subsets: ['latin'],
     display: 'swap',

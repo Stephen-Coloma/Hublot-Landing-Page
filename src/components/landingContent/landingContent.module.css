@@ -1,0 +1,76 @@
+.mainContainer{
+    /* border: red solid 3px; */
+    width: 100%;
+    height: auto; 
+    position: relative;background: linear-gradient(
+        hsla(0, 0%, 9%, 0),
+        hsla(0, 0%, 9%, .65) 47%, #171717
+        ), 
+        url('/assets/main-watch-bg.jpg'); /* Background image */    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}  
+
+.mainContainer > img{
+    width: 100%;
+}
+
+.container{
+    /* border: solid red 3px; */
+    width: 100%;
+    height: 40vh;
+    padding: 0 21px 30px;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(hsla(0, 0%, 9%, 0), hsla(0, 0%, 9%, .65) 47%, #171717);
+    position: absolute;
+    bottom: 7rem;
+}
+
+.content{
+    /* border: solid green 3px; */
+    width: 100%;
+}
+
+.content h1, .content h2, .content h3{
+    letter-spacing: .1rem;
+    color: white;
+}
+
+
+.content h1 {
+    letter-spacing: .2rem;
+    margin: .5rem 0;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.content h2{
+    font-size: .7rem;
+}
+
+.content h3{
+    font-size: .6rem;
+}
+
+.buttomContent{
+    display: flex;
+    align-items: center;
+}
+
+.buttomContent .leftContent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: red solid 3px;
+}
+
+.leftContent img{
+    width: 1rem;
+    display: inline;
+}
+
+#separator{
+    margin: 0 .4rem;
+}
