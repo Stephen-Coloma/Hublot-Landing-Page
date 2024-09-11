@@ -1,6 +1,6 @@
 .nav{
     /* border: red solid 3px; */
-    height: 3.2rem;
+    height: 3.25rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -90,6 +90,9 @@
 
 
 @media screen and (min-width: 1024px) {
+    .nav{
+        height: 3.5rem;
+    }
     .web{
         width: 15%;
         display: flex;
