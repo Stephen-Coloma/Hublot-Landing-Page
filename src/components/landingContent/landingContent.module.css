@@ -4,7 +4,7 @@
     height: auto; 
     position: relative;background: linear-gradient(
         hsla(0, 0%, 9%, 0),
-        hsla(0, 0%, 9%, .65) 30%, #171717
+        hsla(0, 0%, 9%, .65) 30%, var(--accent-color-1)
         ), 
         url('/assets/main-watch-bg.jpg'); /* Background image */    
     background-repeat: no-repeat;
@@ -23,7 +23,7 @@
     padding: 0 21px 30px;
     display: flex;
     align-items: flex-end;
-    background: linear-gradient(hsla(0, 0%, 9%, 0), hsla(0, 0%, 9%, .65) 47%, #171717);
+    background: linear-gradient(hsla(0, 0%, 9%, 0), hsla(0, 0%, 9%, .65) 47%, var(--accent-color-1));
     position: absolute;
     bottom: 4rem;
 }
@@ -35,7 +35,7 @@
 
 .content h1, .content h2, .content h3{
     letter-spacing: .1rem;
-    color: white;
+    color: var(--main-color);
 }
 
 
@@ -51,7 +51,7 @@
 }
 
 .content h2#exclusive{
-    color: rgba(255, 255, 255, 0.432);
+    color: var(--main-color-low-opacity);
 }
 
 .content h3{
@@ -118,19 +118,20 @@
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.596);
+    background-color:  var(--main-color-low-opacity);
 }
 
 .circleV2{
     width: 8px;
     height: 8px;
     border-radius: 50%; 
-    background-color: rgb(255, 255, 255);
+    background-color: var(--main-color);
 }
 
 @media screen and (min-width: 1024px) {
     .mainContainer{
         height: 110vh;
+        overflow: hidden;
     }
 
     .mainContainer > img{

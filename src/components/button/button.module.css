@@ -1,0 +1,16 @@
+.button{
+    all: unset;
+    width: 70%;
+    padding: 1rem 1rem;
+    text-align: center;
+    border: var(--main-color-low-opacity) 2px solid;
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .button{
+        width: 17%;
+    }
+}
