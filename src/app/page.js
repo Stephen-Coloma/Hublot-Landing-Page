@@ -61,6 +61,21 @@ function Home() {
           />
         ))}
       </div>
+
+      <div className="multimedia">
+        <div className="image-container">
+          <img id="img1" src="/assets/yellow-watch-left.jpg" alt="yellow-watch-left"></img>
+          <img id="img2" src="/assets/yellow-watch-right.jpg" alt="yellow-watch-left"></img>
+        </div>
+        <div className="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/6po9d4WQZS8"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
+        </div>
+      </div>
     </>
   );
 }
