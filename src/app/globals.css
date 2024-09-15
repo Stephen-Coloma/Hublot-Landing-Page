@@ -5,6 +5,7 @@
   --accent-color-1: #171717;
   --accent-color-2: #1717179f;
   --accent-color-3: #1717171c;
+  --red: rgb(200, 0, 0);
 }
 
 * {
@@ -22,6 +23,7 @@ body {
   font-family: var(--font-montserrat);
 }
 
+/* Three button wrapper */
 .button-wrapper{
   width: 100%;
   background-color: var(--accent-color-1);
@@ -33,6 +35,32 @@ body {
   align-items: center;
 }
 
+/* Explore watches section */
+.exploreWatches{
+  background-color: var(--accent-color-1);
+  border: none;
+  padding: 2rem 1rem;
+}
+
+.exploreWatches > h2{
+  color: var(--main-color);
+  font-weight: 900;
+  letter-spacing: .1rem;
+  font-size: 1.3rem;
+}
+
+.watch-card-container{
+  background-color: var(--accent-color-1);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+/* Media query for web */
 @media screen and (min-width: 1024px) {
   .button-wrapper{
     flex-direction: row;
@@ -40,5 +68,13 @@ body {
     gap: 1.2rem;
     border-top: var(--main-color-low-opacity) solid 1px;
     border-bottom: var(--main-color-low-opacity) solid 1px;
+  }
+
+  .exploreWatches{
+    padding: 2rem 5rem;
+  }
+
+  .exploreWatches > h2{
+    font-size: 2.5rem;
   }
 }
