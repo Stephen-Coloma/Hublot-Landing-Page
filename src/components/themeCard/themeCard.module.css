@@ -20,30 +20,32 @@
     position: absolute;
     transform: translateX(-50%);
     left: 50%;
-    bottom: 0;   
-    padding: 2rem 5rem;
+    bottom: 0;
+    padding: 1rem;
 }
 
 .content > h2{
     letter-spacing: .1rem;
     font-weight: 700;
     font-size: .75rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     line-height: 3;
     border-bottom: var(--red) solid 2px;
+    text-align: center;
 }
 
 .content > h1{
     letter-spacing: .1rem;
     font-weight: 900;
-    font-size: 2rem;
-    margin-bottom: 4rem;
- }
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
 .themeCardButton{
     all: unset;
-    width: 35%;
-    max-width: 200px;
+    /* max-width: 200px; */
+    width: calc(100% - 2.1rem);
     padding: 1rem 1rem;
     text-align: center;
     border: var(--accent-color-1) 1px solid;
@@ -74,5 +76,23 @@
 @media screen and (min-width: 1024px) {
     .mainContainer .imageHolder{
         height: calc(60vw - 33px);
+    }
+
+    .content{
+        padding: 2rem 5rem;
+        bottom: 0;
+      }
+
+    .content > h2{
+        text-align: left;
+    }
+    
+    .content > h1{
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .themeCardButton{
+        width: 35%;
     }
 }

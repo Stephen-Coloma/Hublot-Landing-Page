@@ -25,7 +25,7 @@ function Home() {
     { img: "/assets/theme-card-1.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP" },
     { img: "/assets/theme-card-2.jpg", text: "BOTIQUES", heading: "BOTIQUES" },
     { img: "/assets/theme-card-3.jpg", text: "NEWS", heading: "BIG BANG UNICO SAILING TEAM: HUBLOT SETS SAIL AGAIN" },
-    { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "Unico Mechanical Revolution" },
+    { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION" },
   ]
 
 
@@ -58,7 +58,7 @@ function Home() {
       {/* Explore watches */}
     <div className="exploreWatches">
         <h2 >EXPLORE WATCHES</h2>
-      </div>
+    </div>
 
       <div className="watch-card-container">
         {watchItems.map((watch, index) => (
@@ -90,6 +90,22 @@ function Home() {
         {themeCardDetails.slice(0,2).map((themeCard, index) => (
           <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading}></ThemeCard>
         ))}
+      </div>
+
+      {/* Between the two cards */}
+      <div className="middleContainer">
+        <div className="leftContainer">
+          <img src="/assets/men-beige.jpg"></img>
+        </div>
+
+        <div className="rightContainer">
+          <div className="contentContainer">
+            <img src="/assets/beige-watch.png"></img>
+            <h3>CLASSIC FUSION</h3>
+            <h3>ESSENTIAL GREY</h3>
+            <button id="beige-button">LEARN MORE</button>
+          </div>
+        </div>
       </div>
 
       <div className="themeCardContainer">
