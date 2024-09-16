@@ -6,6 +6,7 @@ import Button from "@/components/button/Button";
 import { useState } from "react";
 import WatchDisplay from "@/components/watchdisplay/WatchDisplay";
 import ThemeCard from "@/components/themeCard/ThemeCard";
+import Footer from "@/components/footer/Footer";
 
 function Home() {
   const [isSelected, setSelected] = useState(0);
@@ -113,6 +114,8 @@ function Home() {
           <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading}></ThemeCard>
         ))}
       </div>
+
+      <Footer></Footer>
     </>
   );
 }
