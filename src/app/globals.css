@@ -142,11 +142,11 @@ body {
     align-self: center;
   }
 
-  .themeCardContainer{
+  #upperContainer{
     flex-direction: row;
   }
 
-  .themeCardContainer > div{
+  #upperContainer > div{
     width: 50%;
   }
 }

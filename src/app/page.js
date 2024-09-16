@@ -86,7 +86,7 @@ function Home() {
       </div>
 
       {/* Cards */}
-      <div className="themeCardContainer">
+      <div className="themeCardContainer" id="upperContainer">
         {themeCardDetails.slice(0,2).map((themeCard, index) => (
           <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading}></ThemeCard>
         ))}
