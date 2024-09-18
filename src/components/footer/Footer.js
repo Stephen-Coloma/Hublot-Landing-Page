@@ -22,6 +22,7 @@ export default function Footer(){
 
                     <div className={styles.links}></div>
                     <h1>© 2024 Hublot - All intellectual property rights reserved</h1>
+                    
                 </div>
             </div>
         </>
