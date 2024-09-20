@@ -1,8 +1,14 @@
+import { useEffect } from 'react'
 import styles from '../header/header.module.css'
 
 export default function Header() {
-    return (
-      <header>
+    const scrollToTop = (event) => {
+      event.preventDefault();
+      window.scrollTo({top: 0, behavior: 'smooth'})
+    }
+    
+    return (  
+      <header className={styles.header}>
 
         <nav className={styles.nav}>
 
@@ -47,6 +53,13 @@ export default function Header() {
               <img id={styles.searchIcon} src='/assets/search-header.svg'></img>
             </div>
             <h2>What are you looking for?</h2>
+        </div>
+
+        <div className={styles.floater} onClick={scrollToTop}>
+          <h1>BACK TO TOP</h1>
+          <div>
+            <img src="/assets/arrow-up.svg"></img>
+          </div>
         </div>
       </header>
     );
