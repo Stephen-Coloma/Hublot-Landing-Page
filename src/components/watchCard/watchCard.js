@@ -27,7 +27,8 @@ export default function WatchCardDisplay({img, category, name, isNew, price}){
                 </div>
 
                 <div className={styles.heartContainer}>
-                    <button></button>
+                    <input type='checkbox' id='heartToggle'></input>
+                    <label for="heartToggle"></label>
                 </div> 
             </div>
         </>

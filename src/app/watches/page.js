@@ -46,7 +46,6 @@ export default function Watches(){
 
                 <h2 className="out-top-topics">OUR TOP PICKS</h2>
 
-                {/* THIS IS ONLY FOR TESTING PURPOSES ---> TO BE REPLACED WITH CAROUSEL */}
                 <WatchCard img={"/assets/watches/unico-ice-bang.png"} category={"BIG BANG"} name={"UNICO ICE BANG 42 MM"} isNew={true} price={"CHF 21,900 *"}></WatchCard>
             <Footer></Footer>
         </>

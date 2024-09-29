@@ -89,10 +89,37 @@
     justify-content: center;
 }
 
-.heartContainer > button{
-    all: unset;
+.heartContainer > input{
+    display: none;
+}
+
+.heartContainer > label{
     height: 1.4rem;
-    width: 1.4rem;;
+    width: 1.4rem;
     background: url('/assets/heart-header.svg') no-repeat center center;
     background-size: contain;
+    cursor: pointer;
+}
+
+/* this is the css for checked input */
+.heartContainer > input:checked + label{
+    background: url('/assets/heart-filled.svg') no-repeat center center;
+    background-size: contain;
+    
+}
+
+@media  screen and (min-width: 1024px) {
+    .heartContainer{
+        padding: 2rem 2rem;
+        justify-content: end;
+    }
+
+    .bottomContainer > #priceLabel{
+        font-size: .9rem;
+    }
+
+    .heartContainer > label{
+        height: 1.6rem;
+        width: 1.6rem;
+    }
 }
