@@ -84,6 +84,7 @@
       }
 
     .content > h2{
+        display: inline;
         text-align: left;
     }
     

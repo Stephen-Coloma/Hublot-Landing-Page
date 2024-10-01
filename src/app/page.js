@@ -23,10 +23,10 @@ function Home() {
   ];
 
   const themeCardDetails = [
-    { img: "/assets/theme-card-1.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP" },
-    { img: "/assets/theme-card-2.jpg", text: "BOTIQUES", heading: "BOTIQUES" },
-    { img: "/assets/theme-card-3.jpg", text: "NEWS", heading: "BIG BANG UNICO SAILING TEAM: HUBLOT SETS SAIL AGAIN" },
-    { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION" },
+    { img: "/assets/theme-card-1.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP", buttonText: "LEARN MORE" },
+    { img: "/assets/theme-card-2.jpg", text: "BOTIQUES", heading: "BOTIQUES", buttonText: "LEARN MORE"  },
+    { img: "/assets/theme-card-3.jpg", text: "NEWS", heading: "BIG BANG UNICO SAILING TEAM: HUBLOT SETS SAIL AGAIN", buttonText: "LEARN MORE"  },
+    { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION", buttonText: "SEE THE COLLECTION"  },
   ]
 
 
@@ -89,7 +89,7 @@ function Home() {
       {/* Cards */}
       <div className="themeCardContainer" id="upperContainer">
         {themeCardDetails.slice(0,2).map((themeCard, index) => (
-          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading}></ThemeCard>
+          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading} buttonText={themeCard.buttonText}></ThemeCard>
         ))}
       </div>
 
@@ -111,7 +111,7 @@ function Home() {
 
       <div className="themeCardContainer">
         {themeCardDetails.slice(2,4).map((themeCard, index) =>(
-          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading}></ThemeCard>
+          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading} buttonText={themeCard.buttonText}></ThemeCard>
         ))}
       </div>
 

@@ -4,9 +4,10 @@ import Button from "@/components/button/Button";
 import Footer from "@/components/footer/Footer"
 import Header  from "@/components/header/Header"
 import WatchDisplay from "@/components/watchdisplay/WatchDisplay";
-import WatchCard from "@/components/watchCard/watchCard"
 import { useState } from "react";
 import Carousel from "@/components/carousel/Carousel";
+import styles from "@/app/watches/watches.module.css"
+import ThemeCard from "@/components/themeCard/ThemeCard";
 
 export default function Watches(){
     const [isSelected, setSelected] = useState(0);
@@ -123,14 +124,21 @@ export default function Watches(){
         }
     ]
 
+    const themeCardDetails = [
+        { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION", buttonText: "SEE THE COLLECTION"  },
+        { img: "/assets/theme-card-5.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION", buttonText: "LEARN MORE"  },
+        { img: "/assets/theme-card-6.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION", buttonText: "LEARN MORE"  }
+    ]
+
     return(
         <>
             <Header></Header>
-                <div className="watches-heading">
+                <div className={styles.watchesHeading}>
                     <h2>WATCHES</h2>
                 </div>
 
-                <div className="watches-watch-card-container">
+                {/* watch display */}
+                <div className={styles.watchesWatchCardContainer}>
                     {watchItems.map((watch, index) => (
                     <WatchDisplay
                         key={index}
@@ -140,14 +148,32 @@ export default function Watches(){
                     ))}
                 </div>
 
-                <div className="watches-main-button">
+                <div className={styles.watchesMainButton}>
                     <Button isSelected={isSelected === 0 ? true: false} text={'FIND A BOTIQUE'} onClick={()=> handleClick(0)}></Button>
                     <Button isSelected={isSelected === 1 ? true: false} text={'FIND YOUR STRAP'} onClick={()=> handleClick(1)}></Button>
                 </div>
 
-                <h2 className="our-top-topics">OUR TOP PICKS</h2>
+                <h2 className={styles.ourTopTopics}>OUR TOP PICKS</h2>
 
                 <Carousel watchesArray={watchesArray}></Carousel>
+
+                {/* find your watch button */}
+                <div className={styles.buttonContainer}>
+                    <button id={styles.findYourWatchButton}>FIND YOUR HUBLOT WATCH</button>
+                </div>
+
+                {/* theme cards */}
+                <div className={styles.themeCardContainer}>
+                    <ThemeCard img={themeCardDetails[0].img} text={themeCardDetails[0].text} heading={themeCardDetails[0].heading} buttonText={themeCardDetails[0].buttonText}></ThemeCard>
+                </div>
+                
+                <div className={styles.backgroundContainer}>
+                    <div className={styles.themeCardContainer} id={styles.dualThemeCardContainer}>
+                        <ThemeCard img={themeCardDetails[1].img} text={themeCardDetails[1].text} heading={themeCardDetails[1].heading} buttonText={themeCardDetails[1].buttonText}></ThemeCard>
+                        <ThemeCard img={themeCardDetails[2].img} text={themeCardDetails[2].text} heading={themeCardDetails[2].heading} buttonText={themeCardDetails[2].buttonText}></ThemeCard>
+                    </div>
+                </div>
+                
                 
             <Footer></Footer>
         </>
