@@ -26,7 +26,7 @@ body {
 }
 
 /* Three button wrapper */
-.button-wrapper{
+.buttonWrapper{
   width: 100%;
   background-color: var(--accent-color-1);
   padding: 3rem 0rem;
@@ -51,7 +51,7 @@ body {
   font-size: 1.3rem;
 }
 
-.watch-card-container{
+.watchCardContainer{
   background-color: var(--accent-color-1);
   width: 100%;
   display: flex;
@@ -78,14 +78,14 @@ body {
   align-self: flex-end;
 }
 
-.video-container {
+.videoContainer {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%; 
   margin-bottom: 3rem;
 }
 
-.video-container iframe {
+.videoContainer iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -170,9 +170,48 @@ body {
   object-fit: cover; 
 }
 
+.signUpContainer{
+  background-color: var(--grey);
+  padding: 4rem 1.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.signUpContainer > h1{
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: .1rem;
+  margin-bottom: 15px;   
+}
+
+.signUpContainer > button{
+  all: unset;
+  font-size: 0.75rem;
+  letter-spacing: .1rem;
+  font-weight: 700;
+  padding: 1rem 2rem;
+  color: var(--accent-color-1);
+  width: 40%;
+  max-width: 100px;
+  background-color: var(--main-color);
+
+}
+
+.signUpContainer > h2{
+  font-size: 1.15rem;
+  font-family: var(--font-libre-baskerville);
+  font-weight: 400;
+  letter-spacing: .1rem;
+  margin-bottom: 30px;
+}
+
 /* Media query for web */
 @media screen and (min-width: 1024px) {
-  .button-wrapper{
+  .buttonWrapper{
     flex-direction: row;
     padding: 6rem 0rem;
     gap: 1.2rem;
@@ -241,5 +280,28 @@ body {
   .contentContainer h3:nth-of-type(2){
     font-size: .9rem;
     font-weight: 900;
+  }
+
+  .signUpContainer{
+    align-items: start;
+    padding: 3vw 10vw;
+  }
+
+  .signUpContainer > h1{
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: .1rem;
+      margin-bottom: 15px;   
+  }
+
+  .signUpContainer > h2{
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: .1rem;
+      margin-bottom: clamp(15px, 2vw, 40px);   
+  }
+
+  .signUpContainer > button{
+      font-size: 12px;
   }
 }

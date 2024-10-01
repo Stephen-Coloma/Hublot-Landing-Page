@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
 import styles from '../header/header.module.css'
+import Link from 'next/link';
 
 export default function Header() {
     const scrollToTop = (event) => {
@@ -17,14 +17,14 @@ export default function Header() {
           </div>
 
           <div className={styles.imageContainer} id={styles.logoContainer}>
-            <img src="/assets/hublot-logo-header.svg" alt="Logo" />
+            <Link href="/"><img src="/assets/hublot-logo-header.svg" alt="Logo" /></Link>
           </div>
 
           {/* watches, our world and boutiques */}
           <div className={styles.web} id={styles.textContainer}>
-            <h2>WATCHES</h2>
-            <h2>OUR WORLD</h2>
-            <h2>BOUTIQUES</h2>
+            <Link href="/watches" className={styles.defaultLink}><h2>WATCHES</h2></Link>
+            <Link href="/our-world" className={styles.defaultLink}><h2>OUR WORLD</h2></Link>
+            <Link href="/boutiques" className={styles.defaultLink}><h2>BOUTIQES</h2></Link>
           </div>
 
           <div className={`${styles.imageContainer} ${styles.web}`}>

@@ -45,7 +45,7 @@
     width: 100%;
     padding: 0 .5rem;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     align-items: center;
     height: 4rem;
 }
@@ -75,12 +75,19 @@
     display: none;
 }
 
+
+
 #textContainer{
     display: none;
 }
 
-#textContainer > h2{
+.defaultLink{
+    text-decoration: none;
+    color: inherit;
     width: 30%;
+}
+
+#textContainer > .defaultLink > h2{
     font-size: 10px;
     text-align: center;
     letter-spacing: .1rem;

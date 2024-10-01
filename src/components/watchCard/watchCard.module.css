@@ -1,0 +1,136 @@
+.watchCardContainer{
+    border:  var(--accent-color-3) solid 1px;
+    /* border:  red solid 4px; */
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.topContainer{
+    width: 100%;
+    height: 26px;
+    padding: 0rem .7rem;
+    display: flex;
+    gap: .2rem;
+    /* border: solid red 1px; */
+}
+
+.shoppingCartContainer{
+    background-color: var(--accent-color-3);
+    width: 24px;
+    height: 26px;
+    padding: .3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shoppingCartContainer > img{
+    width: 100%;
+}
+
+#new{
+    font-size: .65rem;
+    letter-spacing: .1rem;
+    font-weight: 900;
+    background-color: var(--red);
+    color: var(--main-color);
+    width: fit-content;
+    height: fit-content;
+    padding: .3rem .5rem;
+}
+
+.watchImage{
+    width: 70%;
+    position: relative;
+    top: -20px;
+}
+
+.bottomContainer{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: solid red; */
+}
+
+.bottomContainer > *{
+    text-align: center;
+    letter-spacing: .1rem;
+}
+
+.bottomContainer > h4{
+    font-size: .65rem;
+    padding-bottom: .65rem;
+}
+
+.bottomContainer > h2{
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+    padding-bottom: 1.25rem;
+    font-weight: 900;
+}
+
+.bottomContainer > div{
+    width: 20px;
+    height: 3px;
+    background-color: var(--red);
+}
+
+.bottomContainer > #priceLabel{
+    font-size: .75rem;
+    margin: 1.25rem 0;
+    padding: 0;
+}
+
+.heartContainer{
+    width: 100%;
+    /* border: solid blue; */
+    padding: 1rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.heartContainer > input{
+    display: none;
+}
+
+.heartContainer > label{
+    height: 1.4rem;
+    width: 1.4rem;
+    background: url('/assets/heart-header.svg') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* this is the css for checked input */
+.heartContainer > input:checked + label{
+    background: url('/assets/heart-filled.svg') no-repeat center center;
+    background-size: contain;
+    
+}
+
+@media  screen and (min-width: 420px) {
+    .heartContainer{
+        padding: 2rem 2rem;
+        justify-content: end;
+    }
+}
+
+@media  screen and (min-width: 1024px) {
+    .heartContainer{
+        padding: 2rem 2rem;
+        justify-content: end;
+    }
+
+    .bottomContainer > #priceLabel{
+        font-size: .9rem;
+    }
+
+    .heartContainer > label{
+        height: 1.6rem;
+        width: 1.6rem;
+    }
+}

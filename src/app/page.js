@@ -23,10 +23,10 @@ function Home() {
   ];
 
   const themeCardDetails = [
-    { img: "/assets/theme-card-1.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP" },
-    { img: "/assets/theme-card-2.jpg", text: "BOTIQUES", heading: "BOTIQUES" },
-    { img: "/assets/theme-card-3.jpg", text: "NEWS", heading: "BIG BANG UNICO SAILING TEAM: HUBLOT SETS SAIL AGAIN" },
-    { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION" },
+    { img: "/assets/theme-card-1.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP", buttonText: "LEARN MORE" },
+    { img: "/assets/theme-card-2.jpg", text: "BOTIQUES", heading: "BOTIQUES", buttonText: "LEARN MORE"  },
+    { img: "/assets/theme-card-3.jpg", text: "NEWS", heading: "BIG BANG UNICO SAILING TEAM: HUBLOT SETS SAIL AGAIN", buttonText: "LEARN MORE"  },
+    { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION", buttonText: "SEE THE COLLECTION"  },
   ]
 
 
@@ -36,7 +36,7 @@ function Home() {
       <LandingContent></LandingContent>
       
       {/* The three buttons */}
-      <div className="button-wrapper">
+      <div className="buttonWrapper">
           <Button 
             isSelected={isSelected === 0} 
             text={"FIND YOUR HUBLOT WATCH"}
@@ -61,7 +61,7 @@ function Home() {
         <h2 >EXPLORE WATCHES</h2>
     </div>
 
-      <div className="watch-card-container">
+      <div className="watchCardContainer">
         {watchItems.map((watch, index) => (
           <WatchDisplay
             key={index}
@@ -76,7 +76,7 @@ function Home() {
           <img id="img1" src="/assets/yellow-watch-left.jpg" alt="yellow-watch-left"></img>
           <img id="img2" src="/assets/yellow-watch-right.jpg" alt="yellow-watch-left"></img>
         </div>
-        <div className="video-container">
+        <div className="videoContainer">
           <iframe
             src="https://www.youtube.com/embed/6po9d4WQZS8"
             title="YouTube video player"
@@ -89,7 +89,7 @@ function Home() {
       {/* Cards */}
       <div className="themeCardContainer" id="upperContainer">
         {themeCardDetails.slice(0,2).map((themeCard, index) => (
-          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading}></ThemeCard>
+          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading} buttonText={themeCard.buttonText} darkMode={false}></ThemeCard>
         ))}
       </div>
 
@@ -111,8 +111,14 @@ function Home() {
 
       <div className="themeCardContainer">
         {themeCardDetails.slice(2,4).map((themeCard, index) =>(
-          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading}></ThemeCard>
+          <ThemeCard key={index} img={themeCard.img} text={themeCard.text} heading={themeCard.heading} buttonText={themeCard.buttonText} darkMode={false}></ThemeCard>
         ))}
+      </div>
+
+      <div className="signUpContainer">
+          <h1>KEEP ME UPDATED</h1>
+          <h2>I want to stay up to date with the latest Hublot news.</h2>
+          <button>SIGN UP</button>
       </div>
 
       <Footer></Footer>
