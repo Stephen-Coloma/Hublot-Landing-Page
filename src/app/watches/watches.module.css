@@ -101,10 +101,6 @@
   width: 100%;
 }
 
-#dualThemeCardContainer{
-  flex-direction: row;
-}
-
 .backgroundContainer{
   padding: 3em 0;
   background-color: var(--accent-color-1);
@@ -135,5 +131,13 @@
 
   #findYourWatchButton{
     width: 20%;
+  }
+
+  #bottomContainer{
+    flex-direction: row;
+  }
+
+  #bottomContainer > div{
+    width: 50%;
   }
 }

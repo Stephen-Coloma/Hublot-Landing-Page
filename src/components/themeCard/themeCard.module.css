@@ -71,6 +71,13 @@
     left: 0;
 }
 
+@media screen and (min-width: 768px) {
+    .content{
+        padding: 2rem 5rem;
+        bottom: 70px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .mainContainer .imageHolder{
         height: calc(60vw - 33px);
