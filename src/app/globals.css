@@ -285,10 +285,10 @@ body {
   padding: 3rem 0;
 }
 
-.out-top-topics{
+.our-top-topics{
   width: 100%;
   letter-spacing: .1rem;
-  font-size: 1.25rem;
+  font-size: clamp(1.25rem, 3.5vw ,3rem);
   font-weight: 900;
   padding: 2.5rem 1rem;
 }
@@ -306,5 +306,9 @@ body {
   .watches-main-button{
     padding: 5rem 0;
     flex-direction: row;
+  }
+
+  .our-top-topics{
+    padding: 5rem 7rem;
   }
 }

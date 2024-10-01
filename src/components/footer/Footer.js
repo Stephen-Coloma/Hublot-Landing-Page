@@ -38,7 +38,7 @@ export default function Footer(){
         <>
             <div className={styles.topPart}>
                 <h1>KEEP ME UPDATED</h1>
-                <h2>I want to stay up tp date with the latest Hublot news.</h2>
+                <h2>I want to stay up to date with the latest Hublot news.</h2>
                 <button>SIGN UP</button>
             </div>
 

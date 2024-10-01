@@ -126,7 +126,7 @@ export default function Watches(){
     return(
         <>
             <Header></Header>
-                {/* <div className="watches-heading">
+                <div className="watches-heading">
                     <h2>WATCHES</h2>
                 </div>
 
@@ -143,9 +143,9 @@ export default function Watches(){
                 <div className="watches-main-button">
                     <Button isSelected={isSelected === 0 ? true: false} text={'FIND A BOTIQUE'} onClick={()=> handleClick(0)}></Button>
                     <Button isSelected={isSelected === 1 ? true: false} text={'FIND YOUR STRAP'} onClick={()=> handleClick(1)}></Button>
-                </div> */}
+                </div>
 
-                <h2 className="out-top-topics">OUR TOP PICKS</h2>
+                <h2 className="our-top-topics">OUR TOP PICKS</h2>
 
                 <Carousel watchesArray={watchesArray}></Carousel>
                 

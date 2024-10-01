@@ -57,7 +57,7 @@ function Home() {
       </div>
 
       {/* Explore watches */}
-    <div className="exploreWatches">
+    <div className="explore-watches">
         <h2 >EXPLORE WATCHES</h2>
     </div>
 

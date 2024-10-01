@@ -55,8 +55,15 @@ export default function Carousel({ watchesArray }) {
                 </div>
             </div>
 
-            <button onClick={handleNextClick}>NEXT</button>
-            <button onClick={handlePreviousClick}>PREVIOUS</button>
+            <div className={styles.carouselButtonsContainer}>
+                <div className={styles.arrowContainer} id={styles.previousButton}>
+                    <button onClick={handlePreviousClick}><img src='/assets/left-arrow.svg'></img></button>
+                </div>
+
+                <div className={styles.arrowContainer} id={styles.nextButton}>
+                    <button onClick={handleNextClick}><img src='/assets/right-arrow.svg'></img></button>
+                </div>
+            </div>        
         </>
     );
 }
