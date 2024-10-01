@@ -36,12 +36,6 @@ export default function Footer(){
   
     return(
         <>
-            <div className={styles.topPart}>
-                <h1>KEEP ME UPDATED</h1>
-                <h2>I want to stay up to date with the latest Hublot news.</h2>
-                <button>SIGN UP</button>
-            </div>
-
             <div className={styles.bottomPart}>
                 <div className={styles.contentContainer}>
                     <img src="/assets/hublot-logo-footer.svg"></img>

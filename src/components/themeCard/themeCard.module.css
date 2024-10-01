@@ -15,7 +15,6 @@
 }
 
 .content{
-    background-color: var(--main-color);
     width: 80%;
     position: absolute;
     transform: translateX(-50%);
@@ -48,7 +47,6 @@
     width: calc(100% - 2.1rem);
     padding: 1rem 1rem;
     text-align: center;
-    border: var(--accent-color-1) 1px solid;
     font-size: .8rem;
     font-weight: 700;
     letter-spacing: .1rem;

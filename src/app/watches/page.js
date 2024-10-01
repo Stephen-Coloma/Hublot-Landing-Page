@@ -169,8 +169,8 @@ export default function Watches(){
                 
                 <div className={styles.backgroundContainer}>
                     <div className={styles.themeCardContainer} id={styles.dualThemeCardContainer}>
-                        <ThemeCard img={themeCardDetails[1].img} text={themeCardDetails[1].text} heading={themeCardDetails[1].heading} buttonText={themeCardDetails[1].buttonText}></ThemeCard>
-                        <ThemeCard img={themeCardDetails[2].img} text={themeCardDetails[2].text} heading={themeCardDetails[2].heading} buttonText={themeCardDetails[2].buttonText}></ThemeCard>
+                        <ThemeCard img={themeCardDetails[1].img} text={themeCardDetails[1].text} heading={themeCardDetails[1].heading} buttonText={themeCardDetails[1].buttonText} darkMode={true}></ThemeCard>
+                        <ThemeCard img={themeCardDetails[2].img} text={themeCardDetails[2].text} heading={themeCardDetails[2].heading} buttonText={themeCardDetails[2].buttonText} darkMode={true}></ThemeCard>
                     </div>
                 </div>
                 
