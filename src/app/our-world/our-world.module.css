@@ -1,0 +1,147 @@
+.topContainer{
+    width: 100%;
+    position: relative;
+}
+
+
+.topContainer > img{
+    display: block;
+    width: 100%;    
+}
+
+.textContainer{
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    right: 0;
+    z-index: 200;
+}
+
+.textContainer > *{
+    color: var(--main-color);
+    text-align: center;
+    letter-spacing: .2rem;
+}
+
+.textContainer > h4{
+    font-size: .88rem;
+}
+
+
+.textContainer > h2{
+    padding: .5rem 0;
+    font-size: 1.9rem;
+    font-weight: 900;
+    letter-spacing: .1rem;
+}
+
+.quoteContainer{
+    background-color: var( --accent-color-1);
+    padding: 1.9rem;
+    position: relative;
+}
+
+.quoteContainer::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: -110%;
+    height: 110%; 
+    background: linear-gradient(to top, var(--accent-color-1), transparent);
+    z-index: 100; 
+}
+
+#quote{
+    font-family: var(--font-libre-baskerville);
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    font-weight: 400;
+}
+
+/* Theme cards */
+.themeCardContainer{
+    background-color: var(--accent-color-1);
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+    /* border: solid blue 3px; */
+  }
+  
+.themeCardContainer > div{
+    width: 100%;
+}
+
+.backgroundContainer{
+    padding: 3em 0;
+    background-color: var(--accent-color-1);
+}
+
+#bottomContainer{
+    background-color: var(--main-color);
+}
+
+
+  
+@media screen and (min-width: 768px){
+    .quoteContainer::before {
+        top: -110%;
+        height: 110%; 
+    }
+}
+  
+@media screen and (min-width: 1024px){
+    .textContainer > h2{
+        padding: 1rem 0;
+       font-size: 4.5rem;
+    }
+
+    .topContainer{
+        overflow: hidden;
+        width: 100%;
+        padding-top: 50%; /* 16:9 aspect ratio (9/16 * 100 = 56.25%) */
+    }
+
+    .topContainer > img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .textContainer{
+        bottom: 5%;
+    }
+
+    .quoteContainer{
+        display: flex;
+        justify-content: center;
+        padding: 8rem 5rem;
+    }
+    
+    #quote{
+        width: 60%;
+        font-size: clamp(32px, 2vw,36px);
+    }
+
+    .quoteContainer::before {
+        top: -60%;
+        height: 60%; 
+    }
+
+    #bottomContainer{
+        flex-direction: row;
+    }
+
+    #bottomContainer > div{
+    width: 50%;
+    }
+}

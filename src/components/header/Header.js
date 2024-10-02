@@ -1,3 +1,4 @@
+import { useRef, useState } from 'react';
 import styles from '../header/header.module.css'
 import Link from 'next/link';
 
@@ -6,18 +7,40 @@ export default function Header() {
       event.preventDefault();
       window.scrollTo({top: 0, behavior: 'smooth'})
     }
+
+    // use ref for changing menu logo
+    const menuRef = useRef(null);
+    const hiddenNavRef = useRef(null);
+
+    const handleCheckboxChange = (event) => {
+      if(event. target.checked){
+        menuRef.current.src = "/assets/close.svg";
+        hiddenNavRef.current.classList.add(styles.visible);
+        document.body.classList.add(styles.noScroll)
+      }else{
+        menuRef.current.src = "/assets/menu-header.svg";
+        hiddenNavRef.current.classList.remove(styles.visible);
+        document.body.classList.remove(styles.noScroll)
+      }
+    }
     
     return (  
       <header className={styles.header}>
-
         <nav className={styles.nav}>
 
           <div className={`${styles.imageContainer} ${styles.mobile}`}>
-            <img id={styles.burger} src="/assets/burger-header.svg" alt="Logo" />
+              <input
+                type="checkbox"
+                id={styles.checkbox}
+                onChange={handleCheckboxChange}
+              ></input>
+              <label htmlFor={styles.checkbox} id={styles.labelForCheckbox}>
+                <img id={styles.menu} ref={menuRef} src="/assets/menu-header.svg" alt="Logo" />
+              </label>  
           </div>
 
           <div className={styles.imageContainer} id={styles.logoContainer}>
-            <Link href="/"><img src="/assets/hublot-logo-header.svg" alt="Logo" /></Link>
+            <Link href="/"><img src="/assets/hublot-logo-header.svg" alt="Logo" onClick={handleCheckboxChange}/></Link>
           </div>
 
           {/* watches, our world and boutiques */}
@@ -61,6 +84,12 @@ export default function Header() {
             <img src="/assets/arrow-up.svg"></img>
           </div>
         </div>
+
+        <nav className={`${styles.hiddenNav}`} ref={hiddenNavRef}>
+          <Link href="/watches" className={styles.defaultLink} onClick={handleCheckboxChange}><h2>Watches</h2></Link>
+          <Link href="/our-world" className={styles.defaultLink} onClick={handleCheckboxChange}><h2>Our World</h2></Link>
+          <Link href="/boutiques" className={styles.defaultLink} onClick={handleCheckboxChange}><h2>Boutiques</h2></Link>
+        </nav>
       </header>
     );
   }
