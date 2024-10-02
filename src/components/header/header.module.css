@@ -24,11 +24,15 @@
     border-right: 1px solid var(--accent-color-3);
 }
 
+#checkbox{
+    all: unset;
+}
+
 .imageContainer img{
     width: 1.2rem;
 }
 
-.imageContainer #burger{
+.imageContainer #menu{
     width: 1.7rem;
 }
 
@@ -113,6 +117,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 999;
 }
 
 .floater > h1{
@@ -134,6 +139,46 @@
 
 .floater > div > img{
     width: 100%;
+}
+
+/* HIDDEN NAV CONTENT */
+.hiddenNav {
+    padding: 10rem 2rem;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--accent-color-1);
+    position: absolute;
+    left: -100%;
+    transition: left 1s ease-in-out;
+}
+
+.hiddenNav h2{
+    color: var(--main-color);
+    font-family: var(--font-libre-baskerville);
+    font-style: italic;
+    font-weight: 100;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    line-height: 2;
+
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.hiddenNav.visible {
+    z-index: 888;
+    left: 0;
+}
+
+.hiddenNav.visible h2{
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: 1s;
+}
+
+.noScroll{
+    overflow: hidden;
 }
 
 @media screen and (min-width: 1024px) {
