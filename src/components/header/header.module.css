@@ -162,8 +162,8 @@
     line-height: 2;
 
     opacity: 0;
-    transform: translateX(100px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateX(-150px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 }
 
 .hiddenNav.visible {
@@ -174,7 +174,6 @@
 .hiddenNav.visible h2{
     opacity: 1;
     transform: translateX(0);
-    transition-delay: 1s;
 }
 
 .noScroll{
