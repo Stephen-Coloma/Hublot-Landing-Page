@@ -125,9 +125,9 @@ export default function Watches(){
     ]
 
     const themeCardDetails = [
-        { img: "/assets/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION", buttonText: "SEE THE COLLECTION"  },
-        { img: "/assets/theme-card-5.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP", buttonText: "LEARN MORE"  },
-        { img: "/assets/theme-card-6.jpg", text: "OUR WORLD", heading: "PARTNERSHIP", buttonText: "LEARN MORE"  }
+        { img: "/assets/themeCards/theme-card-4.jpg", text: "OUR WORLD", heading: "UNICO MECHANICAL REVOLUTION", buttonText: "SEE THE COLLECTION"  },
+        { img: "/assets/themeCards/theme-card-5.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP", buttonText: "LEARN MORE"  },
+        { img: "/assets/themeCards/theme-card-6.jpg", text: "OUR WORLD", heading: "PARTNERSHIP", buttonText: "LEARN MORE"  }
     ]
 
     return(
