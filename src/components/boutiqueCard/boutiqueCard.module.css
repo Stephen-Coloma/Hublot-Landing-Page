@@ -1,0 +1,68 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.imageContainer {
+    width: 100%;
+}
+
+.imageContainer > img {
+    width: 100%;
+    object-fit: cover; /* Maintain aspect ratio without distortion */
+}
+
+.content{
+    margin-top: 1.25rem;
+}
+
+.content > #city{
+    margin-bottom: .65rem;
+    font-size: 1.25rem;
+    color: var(--main-color);
+    letter-spacing: .1rem;
+    font-weight: 900;
+}
+
+.content > #address{
+    font-family: var(--font-libre-baskerville);
+    color: var(--main-color-low-opacity);
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 3.0625rem;
+}
+
+.timeContainer{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.25em
+}
+
+.timeContainer #time{
+    font-family: var(--font-libre-baskerville);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--main-color);
+}
+
+.timeContainer > div{
+    width: 100%;
+    background-color: var(--main-color-low-opacity);
+    height: 1px;
+}
+
+@media screen and (min-width: 1024px) {
+    .boutiqueContainer{
+        flex-direction: row;
+    }
+
+    .content > #city{
+        font-size: 2.5rem;
+    }
+}

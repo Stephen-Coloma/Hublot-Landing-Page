@@ -1,0 +1,151 @@
+.boutiqueContainer{
+    width: 100%;
+    background-color: var(--accent-color-1);
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.boutiqueCardContainer{
+    width: 90%;
+    position: relative;
+    top: -100px;
+    display: flex;
+    padding: 0 1rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 4rem;
+}
+
+.titleContainer{
+    padding: 3.125rem 1rem;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 140px;
+}
+
+.content{
+    /* border: solid blue; */
+    height: fit-content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: var(--accent-color-3) solid 2px;
+}
+
+.content > h1{
+    font-weight: 900;
+    letter-spacing: .1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.content > p{
+    font-family: var(--font-libre-baskerville);
+    font-size: 1.125rem;
+    color: var(--accent-color-2);
+    line-height: 1.5;
+}
+
+.content > #separator{
+    height: 3px;
+    width: 20px;
+    background-color: var(--red);
+    margin: 2.5rem 0;
+}
+
+#searchContainer{
+    display: flex;
+    /* border: green solid; */
+    width: 100%;
+}
+
+#searchContainer > #search{
+    all: unset;
+    width: 85%;
+    font-family: var(--font-libre-baskerville);
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: left;
+    color: var(--accent-color-2);
+    letter-spacing: .03rem;
+    padding: 1rem;
+}
+
+#searchContainer > #search:focus{
+   border: var(--accent-color-1) solid 1px;
+   
+}
+
+#searchContainer > #locationContainer{
+    border-left: var(--accent-color-3) solid 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: .25rem;
+}
+
+#locationContainer > img{
+    height: 32px;
+    width: 32px;
+}
+
+@media screen and (min-width: 768px) {
+    .boutiqueCardContainer{
+        flex-direction: row;
+    }
+
+    .boutiqueCardContainer > div{
+        width: 45%;
+    }
+
+    .content{
+        width: 70%;
+    }
+
+    .content > h1{
+        font-size: 4.5rem;
+    }
+
+    .content > p{
+        padding: 0 5rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .boutiqueCardContainer{
+        flex-direction: row;
+    }
+
+    .boutiqueCardContainer > div{
+        width: 32%;
+    }
+
+    .titleContainer{
+        padding-bottom: 200px;
+    }
+
+    .boutiqueCardContainer{
+        top: -140px;
+    }
+
+    .content{
+        width: 50%;
+    }
+
+    .content > p{
+        padding: 0 0;
+    }
+
+    #searchContainer > #search{
+        font-size: 2rem;
+    }
+
+    #searchContainer > #search{
+        padding: 1rem 1rem 0.5rem 1rem;
+    }
+}

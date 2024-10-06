@@ -8,9 +8,9 @@ import ThemeCard from '@/components/themeCard/ThemeCard'
 
 export default function OurWorld(){
     const themeCardDetails = [
-        { img: "/assets/theme-card-5.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP", buttonText: "SEE THE COLLECTION"  },
-        { img: "/assets/theme-card-6.jpg", text: "OUR WORLD", heading: "PARTNERSHIP", buttonText: "LEARN MORE"  },
-        { img: "/assets/theme-card-7.jpg", text: "OUR WORLD", heading: "NEWS AND EVENTS", buttonText: "LEARN MORE"  }
+        { img: "/assets/themeCards/theme-card-5.jpg", text: "OUR WORLD", heading: "CRAFTMANSHIP", buttonText: "SEE THE COLLECTION"  },
+        { img: "/assets/themeCards/theme-card-6.jpg", text: "OUR WORLD", heading: "PARTNERSHIP", buttonText: "LEARN MORE"  },
+        { img: "/assets/themeCards/theme-card-7.jpg", text: "OUR WORLD", heading: "NEWS AND EVENTS", buttonText: "LEARN MORE"  }
     ]
 
     return(
