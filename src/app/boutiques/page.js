@@ -21,9 +21,10 @@ export default function Boutiques(){
     return(
         <>
             <Header></Header>
-                <div className={styles.mainContainer}>
+                <div className={styles.boutiqueContainer}>
                     <BoutiqueCard img={boutiqueDetails[0].img} city={boutiqueDetails[0].city} address={boutiqueDetails[0].address} utc={boutiqueDetails[0].utc}></BoutiqueCard>
                     <BoutiqueCard img={boutiqueDetails[1].img} city={boutiqueDetails[1].city} address={boutiqueDetails[1].address} utc={boutiqueDetails[1].utc}></BoutiqueCard>
+                    <BoutiqueCard img={boutiqueDetails[2].img} city={boutiqueDetails[2].city} address={boutiqueDetails[2].address} utc={boutiqueDetails[2].utc}></BoutiqueCard>
                 </div>
             <Footer></Footer>
         </>
