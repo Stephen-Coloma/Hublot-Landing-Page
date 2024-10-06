@@ -21,10 +21,23 @@ export default function Boutiques(){
     return(
         <>
             <Header></Header>
+                <div className={styles.titleContainer}>
+                    <div className={styles.content}>
+                        <h1>OUR BOUTIQUES</h1>
+                        <p>We have boutiques all over the world, in the most exclusive locations. Discover our global network.</p>
+                        <div id={styles.separator}></div>
+                        <div id={styles.searchContainer}>
+                            <input type='text' id={styles.search} placeholder="Search for city or town"></input>
+                            <div id={styles.locationContainer}>
+                                <img src='/assets/location.svg' alt='location'></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.boutiqueContainer}>
-                    <BoutiqueCard img={boutiqueDetails[0].img} city={boutiqueDetails[0].city} address={boutiqueDetails[0].address} utc={boutiqueDetails[0].utc}></BoutiqueCard>
-                    <BoutiqueCard img={boutiqueDetails[1].img} city={boutiqueDetails[1].city} address={boutiqueDetails[1].address} utc={boutiqueDetails[1].utc}></BoutiqueCard>
-                    <BoutiqueCard img={boutiqueDetails[2].img} city={boutiqueDetails[2].city} address={boutiqueDetails[2].address} utc={boutiqueDetails[2].utc}></BoutiqueCard>
+                    {boutiqueDetails.map((item, index) =>(
+                        <BoutiqueCard key={index} img={item.img} city={item.city} address={item.address} utc={item.utc}></BoutiqueCard>
+                    ))}
                 </div>
             <Footer></Footer>
         </>
