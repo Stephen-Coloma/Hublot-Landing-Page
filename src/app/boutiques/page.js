@@ -35,9 +35,11 @@ export default function Boutiques(){
                     </div>
                 </div>
                 <div className={styles.boutiqueContainer}>
-                    {boutiqueDetails.map((item, index) =>(
-                        <BoutiqueCard key={index} img={item.img} city={item.city} address={item.address} utc={item.utc}></BoutiqueCard>
-                    ))}
+                    <div className={styles.boutiqueCardContainer}>
+                        {boutiqueDetails.map((item, index) =>(
+                            <BoutiqueCard key={index} img={item.img} city={item.city} address={item.address} utc={item.utc}></BoutiqueCard>
+                        ))}
+                    </div>
                 </div>
             <Footer></Footer>
         </>
