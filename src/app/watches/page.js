@@ -132,7 +132,7 @@ export default function Watches(){
 
     return(
         <>
-            <Header></Header>
+            <Header pageSelected={'watchesPage'}></Header>
                 <div className={styles.watchesHeading}>
                     <h2>WATCHES</h2>
                 </div>

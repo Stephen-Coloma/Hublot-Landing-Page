@@ -20,7 +20,7 @@ const boutiqueDetails = [
 export default function Boutiques(){
     return(
         <>
-            <Header></Header>
+            <Header pageSelected={'boutiquesPage'}></Header>
                 <div className={styles.titleContainer}>
                     <div className={styles.content}>
                         <h1>OUR BOUTIQUES</h1>
