@@ -91,10 +91,30 @@
     width: 30%;
 }
 
-#textContainer > .defaultLink > h2{
+#textContainer > .defaultLink > .selectedPage {
     font-size: 10px;
     text-align: center;
-    letter-spacing: .1rem;
+    letter-spacing: 0.1rem;
+    position: relative;
+}
+
+#textContainer > .defaultLink > .notSelectedPage {
+    font-size: 10px;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+/* Pseudo-element styling */
+#textContainer > .defaultLink > .selectedPage::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;  /* Length of the border */
+    height: 5px;  /* Thickness of the border */
+    border-radius: 50%;
+    background-color: var(--red);
 }
 
 #hublotista > h2{

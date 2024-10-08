@@ -5,18 +5,34 @@ import { useState } from "react";
 export default function Carousel({ watchesArray }) {
     const itemRendered = () => {
         if(window.innerWidth >= 1024){
+            // length = watchesArray.length-3;
             return 4;
         }else if(window.innerWidth >= 768){
+            // length = watchesArray.length-3;
             return 3;
         }else if (window.innerWidth >= 420){
+            // length = watchesArray.length-1;
             return 2;
         }else{
+            // length = watchesArray.length-1;
             return 1;
         }
     }
 
-    const length = (itemRendered() === 2 ? watchesArray.length-1 : watchesArray.length-3); //adjustment on the carousel view
-    
+    let length = 0;
+    if(itemRendered() === 4){
+        length = watchesArray.length - 3;
+    }else if(itemRendered() === 3){
+        length = watchesArray.length - 2;
+    }else if(itemRendered() === 2){
+        length = watchesArray.length;
+    }else if(itemRendered() === 1){
+        length = watchesArray.length
+    }
+
+
+    // const length = (itemRendered() === 2 ? watchesArray.length-1 : watchesArray.length-3); //adjustment on the carousel view
+        
     const [index, setIndex] = useState(0);
 
     const handleNextClick = () => {

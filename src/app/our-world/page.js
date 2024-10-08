@@ -15,7 +15,7 @@ export default function OurWorld(){
 
     return(
         <>
-            <Header></Header>
+            <Header pageSelected={'ourWorldPage'}></Header>
                 <div className={styles.topContainer}>
                     <img src='/assets/brown-man.jpg'></img>
                     <div className={styles.textContainer}>

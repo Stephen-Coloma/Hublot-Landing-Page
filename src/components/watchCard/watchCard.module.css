@@ -6,6 +6,23 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    cursor: pointer;
+}
+
+.watchCardContainer::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--accent-color-3); /* New background color on hover */
+    transition: width 1s ease-in-out;
+    z-index: 0;
+}
+
+.watchCardContainer:hover::before {
+   width: 100%;
 }
 
 .topContainer{
