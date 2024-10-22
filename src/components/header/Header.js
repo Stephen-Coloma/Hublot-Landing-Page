@@ -1,8 +1,10 @@
-import { useRef, useState } from 'react';
+import { useRef,useEffect } from 'react';
 import styles from '../header/header.module.css'
 import Link from 'next/link';
 
-export default function Header() {
+export default function Header({pageSelected}) {
+    //style for selected page
+
     const scrollToTop = (event) => {
       event.preventDefault();
       window.scrollTo({top: 0, behavior: 'smooth'})
@@ -13,7 +15,7 @@ export default function Header() {
     const hiddenNavRef = useRef(null);
 
     const handleCheckboxChange = (event) => {
-      if(event. target.checked){
+      if(event.target.checked){
         menuRef.current.src = "/assets/close.svg";
         hiddenNavRef.current.classList.add(styles.visible);
         document.body.classList.add(styles.noScroll)
@@ -23,7 +25,6 @@ export default function Header() {
         document.body.classList.remove(styles.noScroll)
       }
     }
-    
     return (  
       <header className={styles.header}>
         <nav className={styles.nav}>
@@ -45,10 +46,17 @@ export default function Header() {
 
           {/* watches, our world and boutiques */}
           <div className={styles.web} id={styles.textContainer}>
-            <Link href="/watches" className={styles.defaultLink}><h2>WATCHES</h2></Link>
-            <Link href="/our-world" className={styles.defaultLink}><h2>OUR WORLD</h2></Link>
-            <Link href="/boutiques" className={styles.defaultLink}><h2>BOUTIQES</h2></Link>
+            <Link href="/watches" className={styles.defaultLink}>
+              <h2 className={`${(pageSelected === 'watchesPage') ? styles.selectedPage : styles.notSelectedPage}`}>WATCHES</h2>
+            </Link>
+            <Link href="/our-world" className={styles.defaultLink}>
+              <h2 className={`${(pageSelected === 'ourWorldPage') ? styles.selectedPage : styles.notSelectedPage}`}>OUR WORLD</h2>
+            </Link>
+            <Link href="/boutiques" className={styles.defaultLink}>
+              <h2 className={`${(pageSelected === 'boutiquesPage') ? styles.selectedPage : styles.notSelectedPage}`}>BOUTIQUES</h2>
+            </Link>
           </div>
+
 
           <div className={`${styles.imageContainer} ${styles.web}`}>
               <img src='/assets/heart-header.svg'></img>
@@ -86,9 +94,15 @@ export default function Header() {
         </div>
 
         <nav className={`${styles.hiddenNav}`} ref={hiddenNavRef}>
-          <Link href="/watches" className={styles.defaultLink} onClick={handleCheckboxChange}><h2>Watches</h2></Link>
-          <Link href="/our-world" className={styles.defaultLink} onClick={handleCheckboxChange}><h2>Our World</h2></Link>
-          <Link href="/boutiques" className={styles.defaultLink} onClick={handleCheckboxChange}><h2>Boutiques</h2></Link>
+          <Link href="/watches" className={styles.defaultLink} onClick={handleCheckboxChange}>
+            <h2>Watches</h2>
+          </Link>
+          <Link href="/our-world" className={styles.defaultLink} onClick={handleCheckboxChange}>\
+            <h2>Our World</h2>
+          </Link>
+          <Link href="/boutiques" className={styles.defaultLink} onClick={handleCheckboxChange}>
+            <h2 >Boutiques</h2>
+          </Link>
         </nav>
       </header>
     );
