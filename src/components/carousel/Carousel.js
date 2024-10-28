@@ -1,20 +1,22 @@
+'use client'
+
 import styles from "../carousel/carousel.module.css";
 import WatchCard from "@/components/watchCard/watchCard";
 import { useState } from "react";
 
 export default function Carousel({ watchesArray }) {
     const itemRendered = () => {
+        if (typeof window === "undefined") {
+            return 1; // Default value for server-side rendering
+        }
+
         if(window.innerWidth >= 1024){
-            // length = watchesArray.length-3;
             return 4;
         }else if(window.innerWidth >= 768){
-            // length = watchesArray.length-3;
             return 3;
         }else if (window.innerWidth >= 420){
-            // length = watchesArray.length-1;
             return 2;
         }else{
-            // length = watchesArray.length-1;
             return 1;
         }
     }
@@ -29,9 +31,6 @@ export default function Carousel({ watchesArray }) {
     }else if(itemRendered() === 1){
         length = watchesArray.length
     }
-
-
-    // const length = (itemRendered() === 2 ? watchesArray.length-1 : watchesArray.length-3); //adjustment on the carousel view
         
     const [index, setIndex] = useState(0);
 
