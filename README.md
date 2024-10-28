@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Hublot Watch Clone - Next.js Project
+
+This is a frontend clone of the Hublot Watch website, built to enhance frontend development and familiarize myself to NextJS framework. This project is focused on creating an interactive and visually appealing landing page and other related pages.
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally, follow these steps:
 
+### Prerequisites
+- **Node.js** (>=14.0.0 recommended)
+- **npm** or **yarn** for package management
+
+### Installation
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/hublot-watch-clone.git
+    cd hublot-watch-clone
+    ```
+
+2. **Install dependencies:**
+    ```bash
+    npm install # or yarn install
+    ```
+
+### Running the Development Server
+
+To start the development server, use the following command:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev # or yarn dev # or pnpm dev # or bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deployment
+Or visit this link to check out the site:
+### https://hublot-landing-page-clone-stephen-colomas-projects.vercel.app/
 
-## Learn More
+## Project Goals
 
-To learn more about Next.js, take a look at the following resources:
+This is a sample project built solely for practice and skill enhancement in Next.js and frontend development. The main objectives of this project include:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Understanding the fundamentals of Next.js, including routing, server-side rendering, and static site generation.
+- Enhancing skills in creating responsive layouts and dynamic content.
+- Implementing reusable components to improve code modularity and maintainability.
+- Exploring the integration of external libraries and APIs to enrich user experience.
