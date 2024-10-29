@@ -13,8 +13,8 @@ To run this project locally, follow these steps:
 ### Installation
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/your-username/hublot-watch-clone.git
-    cd hublot-watch-clone
+    git clone https://github.com/Stephen-Coloma/Hublot-Landing-Page.git
+    cd Hublot-Landing-Page
     ```
 
 2. **Install dependencies:**
