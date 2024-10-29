@@ -35,7 +35,7 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## Deployment
 Or visit this link to check out the site:
-### https://hublot-landing-page-clone-stephen-colomas-projects.vercel.app/
+### https://hublot-landing-page-clone.vercel.app/
 
 ## Project Goals
 
