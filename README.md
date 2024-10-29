@@ -1,6 +1,6 @@
 # Hublot Watch Clone - Next.js Project
 
-This is a frontend clone of the Hublot Watch website, built to enhance frontend development and familiarize myself to NextJS framework. This project is focused on creating an interactive and visually appealing landing page and other related pages.
+This is a frontend clone of the Hublot Watch website, built to enhance my frontend development skills and familiarize myself to NextJS framework. This project is focused on creating an interactive and visually appealing landing page and other related pages.
 
 ## Getting Started
 
