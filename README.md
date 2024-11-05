@@ -1,6 +1,10 @@
 # Hublot Watch Clone - Next.js Project
 
-This is a frontend clone of the Hublot Watch website, built to enhance my frontend development skills and familiarize myself to NextJS framework. This project is focused on creating an interactive and visually appealing landing page and other related pages.
+## Deployed on Vercel: https://hublot-landing-page-clone.vercel.app/
+
+## Description
+This is a frontend clone of the Hublot Watch website, built to enhance my frontend development skills and familiarize myself to NextJS framework. 
+This project is focused on creating an interactive and visually appealing landing page and other related pages.
 
 ## Getting Started
 
@@ -33,10 +37,6 @@ Open http://localhost:3000 with your browser to see the result.
 
 ---
 
-## Deployment
-Or visit this link to check out the site:
-### https://hublot-landing-page-clone.vercel.app/
-
 ## Project Goals
 
 This is a sample project built solely for practice and skill enhancement in Next.js and frontend development. The main objectives of this project include:
@@ -44,4 +44,3 @@ This is a sample project built solely for practice and skill enhancement in Next
 - Understanding the fundamentals of Next.js, including routing, server-side rendering, and static site generation.
 - Enhancing skills in creating responsive layouts and dynamic content.
 - Implementing reusable components to improve code modularity and maintainability.
-- Exploring the integration of external libraries and APIs to enrich user experience.
